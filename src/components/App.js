@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Main from './Main';
 import '../css/App.css';
+import {
+  Router,
+  Route,
+  Link,
+  IndexRoute,
+  browserHistory }
+from 'react-router';
 
 class App extends Component {
   render() {
