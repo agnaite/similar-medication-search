@@ -38,11 +38,11 @@ var rxNormApi = {
       });
     return meds;
   },
-  getRelated: (url) => {
-    console.log("URL:", url)
-    let meds = axios.get(url).then(response => __getRelated(response.data));
-    return meds;
-  }
+  // getRelated: (url) => {
+  //   console.log("URL:", url)
+  //   // let meds = axios.get(url).then(response => __getRelated(response.data));
+  //   return meds;
+  // }
 }
 
 export default rxNormApi;

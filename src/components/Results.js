@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import RxNormApi from '../api/rxNormApi';
 
+import '../css/Results.css';
+
 class Results extends Component {
   onSelect(event) {
     event.preventDefault();
@@ -14,7 +16,7 @@ class Results extends Component {
   }
 
   render() {
-    let createResultRows = '';
+    let createResultRows = <li>No results found.</li>;
     if (this.props.results) {
       createResultRows = this.props.results.map((med) => {
         return (
@@ -27,8 +29,8 @@ class Results extends Component {
     return(
       <Row>
         <Col sm={8} smOffset={2}>
-          <ul>
-            {createResultRows}
+          <ul className="search-results">
+            { createResultRows }
           </ul>
         </Col>
       </Row>
