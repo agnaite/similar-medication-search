@@ -18,7 +18,7 @@ class Header extends Component {
           </Navbar.Header>
         </Grid>
       </Navbar>
-    )
+    );
   }
 }
 
