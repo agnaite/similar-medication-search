@@ -3,13 +3,21 @@ import { Row, Col } from 'react-bootstrap';
 
 class Results extends Component {
   render() {
+    let createResultRows = '';
+    if (this.props.results) {
+      createResultRows = this.props.results.map(function(med) {
+        return (
+          <li key={med.id}>
+            <a href={med.url}>{med.name}</a>
+          </li>
+        );
+      });
+    }
     return(
       <Row>
         <Col sm={8} smOffset={2}>
           <ul>
-            <li>
-              {this.props.results}
-            </li>
+            {createResultRows}
           </ul>
         </Col>
       </Row>
