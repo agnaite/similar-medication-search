@@ -3,25 +3,25 @@ import { Col } from 'react-bootstrap';
 import RxNormApi from '../api/rxNormApi';
 import axios from 'axios';
 
-import '../css/Results.css';
+import '../css/similarMeds.css';
 
 class SimilarMeds extends Component {
   render() {
     let createSimilarMedsRows = <li>No similar medication found.</li>;
     if (this.props.meds) {
-      createSimilarMedsRows = this.props.meds.map((med) => {
+      console.log('LENGTH', this.props.meds.length)
+      createSimilarMedsRows = this.props.meds.map((med, i) => {
         return (
-          <li>{med.name}</li>
-          // <li key={med.id}>
-          //   <a href={med.url} onClick={this.props.onFind}>{med.name}</a>
-          // </li>
+          <li key={i}>{med.synonym}</li>
         );
       });
     }
     return (
       <Col xs={6} xsOffset={6}>
         <h4>Similar Medication:</h4>
-        { createSimilarMedsRows }
+        <ul className='medication-results'>
+          { createSimilarMedsRows }
+        </ul>
       </Col>
     )
   }

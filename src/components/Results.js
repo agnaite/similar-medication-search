@@ -9,9 +9,9 @@ class Results extends Component {
   render() {
     let createResultRows = <li>No results found.</li>;
     if (this.props.results) {
-      createResultRows = this.props.results.map((med) => {
+      createResultRows = this.props.results.map((med, i) => {
         return (
-          <li key={med.id}>
+          <li key={i}>
             <a href={med.url} onClick={this.props.onFind}>{med.name}</a>
           </li>
         );

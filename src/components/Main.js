@@ -37,15 +37,20 @@ class Main extends Component {
 
     axios.get(url)
     .then(response => {
-      console.log('about to set state');
-      this.setState({
-        similarMeds: response.data.relatedGroup.conceptGroup[0].conceptProperties
+      let rxcui = response.data.relatedGroup.conceptGroup[0].conceptProperties[0].rxcui;
+      let url_two = 'https://rxnav.nlm.nih.gov/REST/rxcui/'+rxcui+'/related.json?tty=SCD+SBD'
+      axios.get(url_two)
+      .then(response => {
+        this.setState({
+          similarMeds: response.data.relatedGroup.conceptGroup[0].conceptProperties
+        });
+        // console.log('read data?', response.data.relatedGroup.conceptGroup[0].conceptProperties);
       });
-    });
+
+    })
 
     console.log('iim hereee', this.state);
   }
-
   render() {
     return (
       <Grid>
