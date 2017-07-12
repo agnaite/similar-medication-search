@@ -3,7 +3,7 @@ import Header from './Header';
 import Main from './Main';
 import About from './About';
 import Home from './Home';
-import { Router, Route } from 'react-router';
+import { Route } from 'react-router';
 import { Grid } from 'react-bootstrap';
 
 import '../css/App.css';

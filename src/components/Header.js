@@ -19,8 +19,8 @@ class Header extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight>
-              <NavItem eventKey={1}><Link to="/search">Find Meds</Link></NavItem>
-              <NavItem eventKey={2}><Link to="/about">About</Link></NavItem>
+              <NavItem href="/search">Find Meds</NavItem>
+              <NavItem href="/about">About</NavItem>
             </Nav>
         </Navbar.Collapse>
         </Grid>

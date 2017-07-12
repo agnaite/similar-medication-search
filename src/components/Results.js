@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
-import RxNormApi from '../api/rxNormApi';
-
+import { Col } from 'react-bootstrap';
 
 import '../css/Results.css';
 
 class Results extends Component {
   render() {
     let createResultRows = <li>No results found.</li>;
+
     if (this.props.results) {
       createResultRows = this.props.results.map((med, i) => {
         return (
@@ -17,6 +16,7 @@ class Results extends Component {
         );
       });
     }
+    
     return(
       <Col xs={6}>
         <ul className="search-results">
