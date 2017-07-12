@@ -17,8 +17,7 @@ class SimilarMeds extends Component {
       });
     }
     return (
-      <Col xs={6} xsOffset={6}>
-        <h4>Similar Medication:</h4>
+      <Col xs={6}>
         <ul className='medication-results'>
           { createSimilarMedsRows }
         </ul>

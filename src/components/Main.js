@@ -44,9 +44,7 @@ class Main extends Component {
         this.setState({
           similarMeds: response.data.relatedGroup.conceptGroup[0].conceptProperties
         });
-        // console.log('read data?', response.data.relatedGroup.conceptGroup[0].conceptProperties);
       });
-
     })
 
     console.log('iim hereee', this.state);
@@ -58,11 +56,11 @@ class Main extends Component {
           <SearchBar inputField={this.state.value}
                      onChange={this.handleChange}
                      onSearch={this.handleSubmit} />
-          <SimilarMeds meds={this.state.similarMeds} />
         </Row>
         <Row>
           <Results results={this.state.results}
                    onFind={this.handleFind} />
+          <SimilarMeds meds={this.state.similarMeds} />
         </Row>
       </Grid>
     );
