@@ -1,0 +1,8 @@
+.medication-results {
+  list-style: none;
+}
+
+.medication-results li {
+  padding: 5px 0;
+  margin-left: -50px;
+}
