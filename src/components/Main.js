@@ -22,7 +22,6 @@ class Main extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.setState({ similarMeds: [''] })
 
     let medicine = RxNormApi.getMedicine(this.state.value);
     medicine.then(data => {
